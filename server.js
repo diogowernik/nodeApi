@@ -4,8 +4,9 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
-app.use(require('../middleware/headers'));
-app.use(require('../middleware/validate-session'));
+
+app.use(require('./middleware/headers'));
+app.use(require('./middleware/validate-session'));
 
 app.use('/test', function(req, res){
     res.send('hello world')
@@ -15,7 +16,7 @@ app.use('/test', function(req, res){
 
 app.use('/api/users', require('./routes/users'));
 app.use('/api/login', require('./routes/sessions'));
-app.use('/api/definition', require('./routes/definitions'));
+app.use('/api/definition', require('./routes/definition'));
 
 app.listen(3000, function(){
     console.log ('app is listen on port 3000...')

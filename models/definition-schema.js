@@ -4,7 +4,7 @@ var DefinitionSchema = db.Schema({
     
     logType: String,
     description: String,
-    owner: {type: dbSchema.Types.ObjectId, ref:'User'}
+    owner: {type: db.Schema.Types.ObjectId, ref:'User'}
     
 });
 

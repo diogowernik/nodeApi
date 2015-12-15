@@ -2,7 +2,7 @@ var router = require('express').Router();
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var constants = require('../config/constants')
-var User = require('../model/user');
+var User = require('../models/user');
 
 router.post('/', (req, res) => {
     User.findOne({username: req.body.user.username}).then(
