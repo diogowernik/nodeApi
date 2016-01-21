@@ -1,7 +1,5 @@
-var db = require ('mongoose');
+var db = require('mongoose');
 
-
-db.connect('mongodb://test:test@0.0.0.0:27017/workouts');
-
+db.connect('mongodb://diogo:diogo@0.0.0.0:27017/workouts');
 
 module.exports = db;
